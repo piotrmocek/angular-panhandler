@@ -1,9 +1,11 @@
-/*! angular-panhandler - v1.2.0 - 2016-12-21
-* Copyright (c) 2016 ; Licensed MIT %> */
+/*! angular-panhandler-hookable - v1.2.0 - 2018-02-20
+* Copyright (c) 2018 ; Licensed MIT %> */
+/*! angular-panhandler-hookable - v1.2.0 - 2018-02-20
+* Copyright (c) 2018 ; Licensed MIT %> */
 (function(){
   'use strict';
   angular.module('panhandler', [])
-    .directive('panhandler', ['$document', function PanhandlerFactory($document) {
+    .directive('panhandler', ['$document', '$rootScope', function PanhandlerFactory($document, $rootScope) {
       function Panhandler ($el, attr, $scope) {
         this.$el = $el;
         this.contentWidth = attr.contentWidth;
@@ -69,6 +71,7 @@
           var y = this.clampY(this.startPos[1] + (this.curr[1] - this.origin[1]));
           this.pos = [x,y];
           this.setPosition(x,y);
+          $rootScope.$broadcast('panhandlerMove', {x: x, y:y});
         },
         setPosition: function(x,y) {
           if(this.has3d){

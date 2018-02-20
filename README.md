@@ -6,6 +6,8 @@
 </p>
 
 Pan Directive for Angular.js - Drag to scroll behavior
+This fork adds emitting events when dragging content.
+You can hook to that event i.e. to preserve table header posision.
 
 ### Usage
 

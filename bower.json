@@ -1,12 +1,13 @@
 {
-  "name": "angular-panhandler",
+  "name": "angular-panhandler-hookable",
   "version": "1.2.0",
   "authors": [
     "Nathan Bleigh <nathan.bleigh@gmail.com>",
-    "Loknath Bharti <lbharti@gmail.com"
+    "Loknath Bharti <lbharti@gmail.com",
+    "Piotr Mocek <piotrmocek@gmail.com>"
   ],
-  "description": "Drag to Pan DOM Element Descendants",
-  "main": ["dist/angular-panhandler.js","dist/angular-panhandler.min.js"],
+  "description": "Drag to Pan DOM Element Descendants (emits event)",
+  "main": ["dist/angular-panhandler-hookable.js","dist/angular-panhandler-hookable.min.js"],
   "keywords": [
     "angular",
     "pan",
